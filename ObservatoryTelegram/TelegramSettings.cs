@@ -13,8 +13,6 @@ namespace Observatory.Telegram
 {
     public class TelegramSettings
     {
-        //public static string UserAgent;
-
         public TelegramSettings()
         {
             Logger.AppendLog("", LogFile,TelegramWorker.ObservatoryTelegramVersion);
