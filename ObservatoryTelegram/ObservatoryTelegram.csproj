@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <Reference Include="ObservatoryFramework">
-      <HintPath>..\..\dll\ObservatoryFramework.dll</HintPath>
+      <HintPath>$(ObservatoryPath)\ObservatoryFramework.dll</HintPath>
     </Reference>
   </ItemGroup>
   
