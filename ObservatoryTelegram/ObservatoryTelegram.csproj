@@ -23,7 +23,7 @@
   </ItemGroup>
   
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(TargetPath)&quot; &quot;C:\Users\Matt\Desktop\Elite Observatory\plugins\&quot; /y&#xD;&#xA;xcopy &quot;$(TargetPath)&quot; &quot;z:\publish\ObservatoryTelegram\&quot; /y&#xD;&#xA;" />
+    <Exec Command="echo &quot;Observatory Path: $(ObservatoryPath)&quot;&#xD;&#xA;echo &quot;Publish Path: $(PublishPath)&quot;&#xD;&#xA;xcopy &quot;$(TargetPath)&quot; &quot;$(ObservatoryPath)\plugins\&quot; /y&#xD;&#xA;xcopy &quot;$(TargetPath)&quot; &quot;$(PublishPath)\ObservatoryTelegram\&quot; /y&#xD;&#xA;" />
   </Target>
 
 </Project>
