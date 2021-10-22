@@ -4,7 +4,9 @@ This is a plugin for Observatory Core.
 
 It will let you have notifications sent to a Telegram Bot.
 
-To use this you must:
+To use this plugin, copy the DLL to the `plugins` folder under your Observatory Core installation. You can find the folder easily by pushing the _Open Plugin Folder_ button in Observatory Core - but ensure you close Observatory before copying the DLL there.
+
+You must also:
 * Have (or create) a Telegram account
 * Have (or create) a Telegram Bot. See [BotFather](https://core.telegram.org/bots#6-botfather) for more details.
 * Once you have a bot, send it a message ("Hello", or whatever). The will allow the plugin to find the necessary Chat ID.
