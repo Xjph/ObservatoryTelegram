@@ -1,15 +1,6 @@
 ﻿using Observatory.Framework;
-using Observatory.Framework.Files;
-using Observatory.Framework.Files.Journal;
 using Observatory.Framework.Interfaces;
-using Observatory.Framework.Files.ParameterTypes;
-using System.Collections.Generic;
-using System.Linq;
 using System;
-using System.Collections.ObjectModel;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.IO;
 
 namespace Observatory.Telegram
 {
@@ -47,7 +38,8 @@ namespace Observatory.Telegram
         public void Load(IObservatoryCore observatoryCore)
         {
             Core = observatoryCore;
-            httpClient = new();
+            httpClient = Core.HttpClient;
+            settings.client = httpClient;
             Logger.AppendLog("Plugin Loaded", settings.LogFile,Version);
         }
 
