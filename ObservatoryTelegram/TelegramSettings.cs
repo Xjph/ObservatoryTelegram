@@ -21,6 +21,7 @@ namespace Observatory.Telegram
         [SettingDisplayName("Telegram Bot API Key")]
         public string APIKey { get => (apikey==null) ? "" : apikey; set => apikey=value; }
 
+        [System.Text.Json.Serialization.JsonIgnore]
         [SettingDisplayName("Force ChatID Update")]
         public Action ForceUpdate
         {
@@ -55,7 +56,7 @@ namespace Observatory.Telegram
                 string url = "https://api.telegram.org/bot" + APIKey + "/getUpdates";
                 
                 string resultStr;
-                client.Timeout = new TimeSpan(0, 0, 8);
+                //client.Timeout = new TimeSpan(0, 0, 8);
                 client.DefaultRequestHeaders.Add("ContentType", "text/text");
                 client.DefaultRequestHeaders.Add("User-Agent", TelegramWorker.ObservatoryTelegramVersion);
                 try
