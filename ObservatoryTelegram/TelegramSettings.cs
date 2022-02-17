@@ -21,6 +21,9 @@ namespace Observatory.Telegram
         [SettingDisplayName("Telegram Bot API Key")]
         public string APIKey { get => (apikey==null) ? "" : apikey; set => apikey=value; }
 
+        [SettingDisplayName("Telegram Plugin Enabled")]
+        public bool IsEnabled { get; set; }
+
         [System.Text.Json.Serialization.JsonIgnore]
         [SettingDisplayName("Force ChatID Update")]
         public Action ForceUpdate
@@ -40,6 +43,8 @@ namespace Observatory.Telegram
         public string ChatID { get; set; }
 
         internal HttpClient client;
+
+
 
         public void GetChatID()
         {

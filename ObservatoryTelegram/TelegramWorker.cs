@@ -24,7 +24,8 @@ namespace Observatory.Telegram
         {
             settings = new()
             {
-                APIKey = ""
+                APIKey = "",
+                IsEnabled=true,
             };
         }
 
@@ -45,7 +46,7 @@ namespace Observatory.Telegram
 
         public void OnNotificationEvent(NotificationArgs noti)
         {
-            if (settings.ChatID != "" && settings.ChatID !="0")
+            if (settings.ChatID != "" && settings.ChatID !="0" && settings.IsEnabled)
             {
                 try
                 {
